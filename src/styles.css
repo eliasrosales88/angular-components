@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-red{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+.border-1{
+    border: 1px solid #eee;
+    padding: 10px;
+}
+.border-red{
+    border-color: red;
+}

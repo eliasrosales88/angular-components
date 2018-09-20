@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StringInterpolationComponent implements OnInit {
   text1 = 'Mi primer texto con string interpolation!!';
+  
 
   constructor() { }
 
