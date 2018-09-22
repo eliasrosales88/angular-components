@@ -4,8 +4,8 @@
     color: white;
     padding: 10px;
 }
-.bg-gray{
-    background: #eee;
+.bg-green{
+    background: green;
 }
 .border-1{
     border: 1px solid #eee;
@@ -14,5 +14,11 @@
 .border-red{
     border-color: red;
 }
+.border-green{
+    border-color: green;
+}
 
+.border-red, .border-green, .mb-20{
+    margin-bottom: 20px;
+}
 

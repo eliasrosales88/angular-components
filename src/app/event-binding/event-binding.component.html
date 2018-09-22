@@ -1,0 +1,8 @@
+<div class="border-1 border-red">
+    <p>El siguiente boton tiene el "event handler" de Angular (click), de esta manera incorporamos funcionalidad a los elementos html y en este caso, al boton que hemos creado:</p>
+    <!-- <code> < button class="btn btn-primary" [disabled]="isDisabled" <b>{{'(click)="onTextChange"'}}</b> >Event binding</ button ></code><br> -->
+    <button class="btn btn-primary" [disabled]="isDisabled" (click)="onTextChange()">Cambiar texto</button>
+    <blockquote>{{demoText}}</blockquote>  
+  </div>
+    
+    
