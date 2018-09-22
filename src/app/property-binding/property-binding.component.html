@@ -1,0 +1,17 @@
+<div class="border-1 border-red">
+  <p>El siguiente boton tiene el atributo html "disabled" pero con el property-binding de Angular de esta manera el codigo html queda asi:</p>
+  <code> < button class="btn btn-primary" <b>[disabled]="isDisabled"</b> >Property binding< /button ></code><br>
+  <button class="btn btn-primary" [disabled]="isDisabled">Property binding</button>
+  <br>
+  <p>El codigo en el archivo TS del componente queda de la siguiente manera:</p>
+  <code>{{'export class PropertyBindingComponent implements OnInit {'}}</code><br>
+  <code>isDisabled = <b>{{isDisabled}}</b>;</code><br>
+  
+  <p>El metodo que hace que cambie a los <b>2 segundos</b> es el siguiente: </p>
+  <code>{{'constructor() {'}}</code><br>
+  <code>{{'setTimeout(() =>{'}} </code><br>
+  <code>{{'this.isDisabled = false;'}}</code><br>
+  <code>{{'}, 2000);'}}</code>
+</div>
+  
+  
