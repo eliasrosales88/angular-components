@@ -1,17 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-.bg-red{
-    background: red;
+.bg-red-title, .bg-green-title, .bg-red, .bg-green{
     color: white;
     padding: 10px;
 }
+.bg-red-title{
+    background-image: linear-gradient(to left , white, red 50%);    
+}
+.bg-green-title{
+    background-image: linear-gradient(to left , white, green 50%);    
+}
+.bg-red{
+    background: red;
+}
 .bg-green{
     background: green;
-    color: white;
-    padding: 10px;
 }
 .border-1{
     border: 1px solid #eee;
     padding: 10px;
+    box-shadow: 0 0 11px #333333;
 }
 .border-red{
     border-color: red;
