@@ -1,0 +1,14 @@
+<div class="border-1 border-green ">
+  <p>Aqui integramos las <b>4 formas</b> de hacer <b>Databinding</b>:</p>
+  <ol>
+    <li>String interpolation.</li>
+    <li>Property binding.</li>
+    <li>Event binding.</li>
+    <li>Two way data binding.</li>
+  </ol>
+    <input type="text" name="twdb2" id="twdb2" class="form-control" [(ngModel)]="textToChange">
+
+    <button class="btn btn-success" [disabled]="textToChange =='' " (click)="clearInput()">Limpiar input!</button>
+    <h3>Recibimos texto a traves del Two way data binding</h3>
+    <blockquote> {{ textToChange }} </blockquote>
+</div>

@@ -8,6 +8,7 @@ import { TwoWayDatabindingComponent } from './two-way-databinding/two-way-databi
 import { NgContentFeatureComponent } from './ng-content-feature/ng-content-feature.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { DatabindingExerciseComponent } from './databinding-exercise/databinding-exercise.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     TwoWayDatabindingComponent,
     NgContentFeatureComponent,
     PropertyBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    DatabindingExerciseComponent
   ],
   imports: [
     BrowserModule,
