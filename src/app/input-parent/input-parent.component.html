@@ -1,0 +1,16 @@
+<div class="row border-orange border-1 ma-10">
+    <h3>Componente Padre</h3>
+    <div class="col-xs-6">
+      <p>Esta es la informacion que envio al hijo</p> 
+      <button class="btn btn-primary" (click)="addCar()">+ Agregar nuevo</button>
+      <ul>
+        <li *ngFor="let car of carInformation">{{car.brand}} - {{car.model}}</li>
+      </ul>
+    </div>
+    <div class="col-xs-6 border-orange border-1">
+        <h3>Componente Hijo</h3>
+        <ul>
+          <app-input-child *ngFor="let car of carInformation" [car]="car"></app-input-child>
+        </ul>
+    </div>
+</div>

@@ -9,6 +9,8 @@ import { NgContentFeatureComponent } from './ng-content-feature/ng-content-featu
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { DatabindingExerciseComponent } from './databinding-exercise/databinding-exercise.component';
+import { InputChildComponent } from './input-child/input-child.component';
+import { InputParentComponent } from './input-parent/input-parent.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DatabindingExerciseComponent } from './databinding-exercise/databinding
     NgContentFeatureComponent,
     PropertyBindingComponent,
     EventBindingComponent,
-    DatabindingExerciseComponent
+    DatabindingExerciseComponent,
+    InputChildComponent,
+    InputParentComponent
   ],
   imports: [
     BrowserModule,

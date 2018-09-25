@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.bg-red-title, .bg-green-title, .bg-purple-title, .bg-orange-title .bg-red, .bg-green, .bg-purple, .bg-orange{
+.bg-red-title, .bg-green-title, .bg-purple-title, .bg-orange-title, .bg-red, .bg-green, .bg-purple, .bg-orange{
     color: white;
     padding: 10px;
 }
@@ -49,3 +49,6 @@
     margin-bottom: 20px;
 }
 
+.ma-10{
+    margin: 10px;
+}

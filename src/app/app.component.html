@@ -44,11 +44,18 @@
       <app-databinding-exercise></app-databinding-exercise>
       
       <h1 class="bg-purple-title">Databinding (avanzado)</h1>
-      <span class="bg-purple">Decorador @Input | <b>Hijo -> Padre</b></span>
+      <span class="bg-purple">Decorador @Input | <b>Padre -> Hijo</b></span>
       <div class="border-purple border-1">
         <p>El decorador <b>@Input</b> sirve para <b>conectar/unir</b> las propiedades de un componente con otro. Esto quiere decir que la informacion almacenada en una propiedad de un componente, viaja a otro para que aquel que la recibe pueda usar la informacion.</p>
-        <p>Este decorador se usa usualmanete para pasar informacion de un componente <b>hijo a padre</b></p>
-        <p>Para saber cual es un componente hijo y cual es un componente padre solo tenemos que fijarnos en cual de los dos componentes, uno contiene las etiquetas del otro dentro de su plantilla html.</p>
+        <p>Este decorador se usa usualmanete para pasar informacion de un componente <b>padre a hijo</b></p>
+        <p>Para saber cual es un componente hijo y cual es un componente padre solo tenemos que fijarnos en cual de los dos componentes contiene las etiquetas del otro dentro de su plantilla html.</p>
+        <blockquote>El decorador @Input hace accesible la propiedad para que pueda recibir informacion desde su componente padre.</blockquote>
+        <p>Vemos que el objeto "carInformation" es un array almacenado en el componente padre y podemos pasarle al hijo la informacion a traves de la propiedad [car] (no es un atributo html) que hemos hecho accesible con el decorador @Input en el componente hijo.</p>
+        <p>Decorador en el componente hijo:</p>
+  
+        <code>{{'@Input() car: {brand:string, model:string};'}}</code><br><br>
+        <code>< app-input-child *ngFor="let car of carInformation" [car]="car">< /app-input-child ></code><br><br>
+        <app-input-parent></app-input-parent>
       </div>
     </div>
   </div>
