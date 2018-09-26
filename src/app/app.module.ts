@@ -11,6 +11,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { DatabindingExerciseComponent } from './databinding-exercise/databinding-exercise.component';
 import { InputChildComponent } from './input-child/input-child.component';
 import { InputParentComponent } from './input-parent/input-parent.component';
+import { OutputParentComponent } from './output-parent/output-parent.component';
+import { OutputChildComponent } from './output-child/output-child.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { InputParentComponent } from './input-parent/input-parent.component';
     EventBindingComponent,
     DatabindingExerciseComponent,
     InputChildComponent,
-    InputParentComponent
+    InputParentComponent,
+    OutputParentComponent,
+    OutputChildComponent
   ],
   imports: [
     BrowserModule,

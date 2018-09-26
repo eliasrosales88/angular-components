@@ -1,0 +1,15 @@
+<div class="row border-orange border-1 ma-10">
+  <h3>Componente Padre</h3>
+  <div class="col-xs-6">
+    <p>Esta es la informacion que recibo del hijo</p> 
+    <ul>
+      <li *ngFor="let item of dataReceivedFromChild">{{item.title}} - {{item.content}}</li>
+    </ul>    
+    
+  </div>
+  <div class="col-xs-6 border-orange border-1">
+      <h3>Componente Hijo</h3>
+        <app-output-child (dataCreated)="onDataCreated($event)"></app-output-child>
+  </div>
+</div>
+

@@ -44,7 +44,7 @@
       <app-databinding-exercise></app-databinding-exercise>
       
       <h1 class="bg-purple-title">Databinding (avanzado)</h1>
-      <span class="bg-purple">Decorador @Input | <b>Padre -> Hijo</b></span>
+      <span class="bg-purple">Custom property binding | Decorador @Input | <b>Padre -> Hijo</b></span>
       <div class="border-purple border-1">
         <p>El decorador <b>@Input</b> sirve para <b>conectar/unir</b> las propiedades de un componente con otro. Esto quiere decir que la informacion almacenada en una propiedad de un componente, viaja a otro para que aquel que la recibe pueda usar la informacion.</p>
         <p>Este decorador se usa usualmanete para pasar informacion de un componente <b>padre a hijo</b></p>
@@ -55,8 +55,37 @@
   
         <code>{{'@Input() car: {brand:string, model:string};'}}</code><br><br>
         <code>< app-input-child *ngFor="let car of carInformation" [car]="car">< /app-input-child ></code><br><br>
+        
+        <p>Tambien se puede crear un ALIAS que usariamos en la etiqueta del componenet hijo:</p>
+        <code>{{'@Input("alias") car: {brand:string, model:string};'}}</code><br><br>
         <app-input-parent></app-input-parent>
       </div>
+
+      <span class="bg-purple">Custom event binding | Decorador @Output | EventEmitter | <b>Hijo -> Padre</b></span>
+      <div class="border-purple border-1">
+        <p>El decorador <b>@Output</b> sirve para <b>hacer accesible</b> el evento de un componente hijo a un componente padre. Esto quiere decir que el evento (la informacion del evento) que es generado en un componente, viaja a otro para que aquel que la recibe pueda usar la informacion.</p>
+        
+        <blockquote>El decorador @Output hace accesible al evento para que pueda enviar informacion a su componente padre.</blockquote>
+        
+        <p>Decorador en el componente hijo:</p>
+        <code>{{'@Output() dataCreated = new EventEmitter< {title: string, content:string} >();'}}</code><br><br>
+        <p>Donde dataCreated es un <b>evento personalizado</b> </p>
+        
+        <code>< app-output-child <b>(dataCreated)</b>="onDataCreated($event)">< /app-output-child></code>
+        
+        <app-output-parent></app-output-parent>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
 </div>
