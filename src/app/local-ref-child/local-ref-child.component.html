@@ -1,0 +1,8 @@
+<label for="local-ref-input">Nombre de usuario</label>
+<input type="text" class="form-control" name="local-ref-input" #usernameInput>
+<button class="btn btn-primary" (click)="addUser(usernameInput)">+ Agregar Usuario</button>
+<button class="btn btn-success" (click)="viewChildTest()">@ViewChild Test</button>
+
+<ul>
+  <li *ngFor="let user of usersArray">{{user}}</li>
+</ul>

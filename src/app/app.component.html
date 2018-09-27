@@ -69,11 +69,33 @@
         
         <p>Decorador en el componente hijo:</p>
         <code>{{'@Output() dataCreated = new EventEmitter< {title: string, content:string} >();'}}</code><br><br>
-        <p>Donde dataCreated es un <b>evento personalizado</b> </p>
+        <p>Donde dataCreated es un <b>evento personalizado</b>. <i>Recordar que la propiedad con el decorador @Output se le asigna un valor con el igual (=) para convertilo en un objeto tipo EventEmitter.</i></p>
         
         <code>< app-output-child <b>(dataCreated)</b>="onDataCreated($event)">< /app-output-child></code>
         
         <app-output-parent></app-output-parent>
+      </div>
+
+      <span class="bg-purple">Local reference | Decorador @ViewChild</span>
+      <div class="border-purple border-1">
+        <p>Las <b>referencias locales</b> sirven como Id's en una plantilla HTML siento este el unico sitio donde las podemos usar y son interpretadas por Angular de manera tal que podamos acceder a todas las propiedades de esos elementos html a traves del codigo TS del componente.</p>
+        
+        <blockquote>El decorador @ViewChild hace accesible al elemento html o componente que se le sea pasado a traves de una <b>referencia local</b>.</blockquote>
+        
+        <h4>Decorador @ViewChild en el componente hijo:</h4>
+        <code>{{'@ViewChild("<b>usernameInput</b>") username: ElementRef;'}}</code><br><br>
+        <p>Donde <b>usernameInput</b> es una <b>referencia local</b></p>
+        <p>De esta manera, tenemos que al usar el decorador @ViewChild el objeto pasa a ser de tipo <b>ElementRef</b> que tiene la propiedad <b>nativeElement</b> para acceder a las propiedades del elemento que hemos seleccionado.</p><br>
+        
+        <h4>Decorador @ViewChild en el componente Padre:</h4>
+        <p>Primero usamos una referencia local en el componente hijo:</p>
+        <code>< app-local-ref-child (userListFromChild)="onUserAdded($event)" <b>#localRefChild</b>>< /app-local-ref-child></code><br><br>
+        
+        <p>En nuestro codigo TS del componente padre tenemos:</p>
+        <code>{{"@ViewChild('<b>localRefChild</b>') childComponent: LocalRefChildComponent;"}}</code><br><br>
+        <p>Aqui vemos como la propiedad es de tipo <b>LocalRefChildComponent</b> y de esta manera hacemos accesible las propiedades del componente hijo al padre.</p>
+        
+        <app-local-ref-parent></app-local-ref-parent>
       </div>
 
 

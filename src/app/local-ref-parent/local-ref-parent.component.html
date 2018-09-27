@@ -1,0 +1,27 @@
+<div class="row border-orange border-1 ma-10">
+  <h3>Componente Padre</h3>
+  <div class="col-xs-6">
+    <div class="row">
+      <div class="col-xs-6">
+        <p>Esta es la informacion que recibo del hijo</p> 
+        <ul>
+          <li *ngFor="let item of userListReceived">{{item.username}}</li>
+        </ul>    
+      </div>
+      <div class="col-xs-6">
+        <p>Prueba de @ViewChild sobre un componente hijo desde el Padre</p>
+        <button class="btn btn-warning" (click)="viewChildTest()">@ViewChild Test!</button>
+          <ul>
+            <li *ngFor="let user of childComponent.usersArray">{{user}}</li>
+          </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="col-xs-6 border-orange border-1">
+      <h3>Componente Hijo</h3>
+        <app-local-ref-child (userListFromChild)="onUserAdded($event)" #localRefChild></app-local-ref-child>
+        
+  </div>
+</div>
+

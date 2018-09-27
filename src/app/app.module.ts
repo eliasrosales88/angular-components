@@ -13,6 +13,8 @@ import { InputChildComponent } from './input-child/input-child.component';
 import { InputParentComponent } from './input-parent/input-parent.component';
 import { OutputParentComponent } from './output-parent/output-parent.component';
 import { OutputChildComponent } from './output-child/output-child.component';
+import { LocalRefParentComponent } from './local-ref-parent/local-ref-parent.component';
+import { LocalRefChildComponent } from './local-ref-child/local-ref-child.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { OutputChildComponent } from './output-child/output-child.component';
     InputChildComponent,
     InputParentComponent,
     OutputParentComponent,
-    OutputChildComponent
+    OutputChildComponent,
+    LocalRefParentComponent,
+    LocalRefChildComponent
   ],
   imports: [
     BrowserModule,
