@@ -3,13 +3,13 @@
   <div class="col-xs-6">
     <div class="row">
       <div class="col-xs-6">
-        <p>Esta es la informacion que recibo del hijo</p> 
+        <p>Esta es la informacion que recibo del hijo usando <b>@Output y EventEmitter</b></p> 
         <ul>
           <li *ngFor="let item of userListReceived">{{item.username}}</li>
         </ul>    
       </div>
       <div class="col-xs-6">
-        <p>Prueba de @ViewChild sobre un componente hijo desde el Padre</p>
+          <p>Esta es la informacion que recibo del hijo usando <b>@ViewChild</b></p> 
         <button class="btn btn-warning" (click)="viewChildTest()">@ViewChild Test!</button>
           <ul>
             <li *ngFor="let user of childComponent.usersArray">{{user}}</li>
