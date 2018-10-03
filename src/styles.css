@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.bg-red-title, .bg-green-title, .bg-purple-title, .bg-orange-title, .bg-red, .bg-green, .bg-purple, .bg-orange{
+.bg-red-title, .bg-green-title, .bg-purple-title, .bg-orange-title, .bg-blue-title, .bg-red, .bg-green, .bg-purple, .bg-orange, .bg-blue{
     color: white;
     padding: 10px;
 }
@@ -15,6 +15,10 @@
 .bg-orange-title{
     background-image: linear-gradient(to left , white, orange 50%);    
 }
+.bg-blue-title{
+    background-image: linear-gradient(to left , white, blue 50%);    
+}
+
 .bg-red{
     background: red;
 }
@@ -26,6 +30,9 @@
 }
 .bg-orange{
     background: orange;
+}
+.bg-blue{
+    background: blue;
 }
 .border-1{
     border: 1px solid #eee;
@@ -44,8 +51,11 @@
 .border-orange{
     border-color: orange;
 }
+.border-blue{
+    border-color: blue;
+}
 
-.border-red, .border-green, .border-purple, .border-orange .mb-20{
+.border-red, .border-green, .border-purple, .border-orange, .border-blue, .mb-20{
     margin-bottom: 20px;
 }
 

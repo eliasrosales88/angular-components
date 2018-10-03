@@ -1,0 +1,4 @@
+<div #text> {{elemento[0].name}}</div>
+<ul>
+  <li *ngFor="let element of elemento" [ngStyle]="{'color': 'red'}">{{ element.name }}</li>
+</ul>

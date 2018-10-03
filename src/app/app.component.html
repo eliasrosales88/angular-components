@@ -98,6 +98,23 @@
         <app-local-ref-parent></app-local-ref-parent>
       </div>
 
+      <h1 class="bg-blue-title">Lifecycle Hooks</h1>
+      <span class="bg-blue">ngOnInit | ngOnChanges</span>
+      <div class="border-blue border-1">
+        <p>Para entender los <i>Lifecycle Hooks</i> hay que tener presente que en el ciclo de vida de un componente, siempre se llamara primero al contructor de dicho componente y luego se llamara a <b>ngOnInit</b>.</p><br>
+        <p><b>ngOnChanges</b> evalua cada cambio que se hace en el objeto que cambia en memoria. Aqui se puede decir que un array que se le agregan elementos no es un cambio como tal, pero un array de objetos y a uno de esos objetos se le cambia el valor de dicha propiedad si que seria un cambio en memoria y por lo tanto se dispararia <b>ngOnChanges</b>.</p><br>
+        <p>Adicionalmente, existen otros <b>lifecycle hooks</b> los cuales se activan dependiendo del momento en el que se encuentra el componente. El resto de los life hooks son:</p>
+        <ul>
+          <li><b>ngDoCheck:</b> Evalua los cambios en todo momento.</li>
+          <li><b>ngAfterContentInit:</b> Se usa cuando usamos la etiqueta ng-content y sirve para evaluar si el contenido dentro de ng-content se inicializo. <i>@ViewContent</i></li>
+          <li><b>ngAfterContentChecked:</b> Se usa para ejecutar una accion despues de que se confirmo que el contenido existe usando las etiquetas ng-content.<i>@ViewContent</i></li>
+          <li><b>ngAfterViewInit:</b> Evalua si el contenido se inicializo en un componente usando el decorador <i>@ViewChild</i>.</li>
+          <li><b>ngAfterViewChecked:</b>Evalua si el contenido ha sido chequeado. Usa el decorador <i>@ViewChild</i></li>
+          <li><b>ngOnDestroy:</b> Este lifecycle hook se ejecuta justo antes de que Angular haga que el componente sea removido.</li>
+      </ul>
+        <app-life-hook-parent></app-life-hook-parent>
+      </div>
+
 
 
 

@@ -15,6 +15,8 @@ import { OutputParentComponent } from './output-parent/output-parent.component';
 import { OutputChildComponent } from './output-child/output-child.component';
 import { LocalRefParentComponent } from './local-ref-parent/local-ref-parent.component';
 import { LocalRefChildComponent } from './local-ref-child/local-ref-child.component';
+import { LifeHookParentComponent } from './life-hook-parent/life-hook-parent.component';
+import { LifeHookChildComponent } from './life-hook-child/life-hook-child.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { LocalRefChildComponent } from './local-ref-child/local-ref-child.compon
     OutputParentComponent,
     OutputChildComponent,
     LocalRefParentComponent,
-    LocalRefChildComponent
+    LocalRefChildComponent,
+    LifeHookParentComponent,
+    LifeHookChildComponent
   ],
   imports: [
     BrowserModule,
