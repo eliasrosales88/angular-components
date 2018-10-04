@@ -17,6 +17,10 @@ import { LocalRefParentComponent } from './local-ref-parent/local-ref-parent.com
 import { LocalRefChildComponent } from './local-ref-child/local-ref-child.component';
 import { LifeHookParentComponent } from './life-hook-parent/life-hook-parent.component';
 import { LifeHookChildComponent } from './life-hook-child/life-hook-child.component';
+import { DatabindingExerciseAdvancedComponent } from './databinding-exercise-advanced/databinding-exercise-advanced.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './odd/odd.component';
+import { EvenComponent } from './even/even.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { LifeHookChildComponent } from './life-hook-child/life-hook-child.compon
     LocalRefParentComponent,
     LocalRefChildComponent,
     LifeHookParentComponent,
-    LifeHookChildComponent
+    LifeHookChildComponent,
+    DatabindingExerciseAdvancedComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,

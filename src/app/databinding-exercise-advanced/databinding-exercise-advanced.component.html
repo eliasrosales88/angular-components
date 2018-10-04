@@ -1,0 +1,11 @@
+<div class="row ma-10">
+  <div class="col-xs-6 border-orange border-1"><app-game-control (clock)="onStarted($event)"></app-game-control></div>
+ <div class="col-xs-3 border-orange border-1">
+   <h2>Numeros Impares</h2>
+   <app-odd *ngFor="let odd of oddNumber" [odd]="odd"></app-odd>
+  </div>
+  <div class="col-xs-3 border-orange border-1">
+    <h2>Numeros Pares</h2>
+    <app-even *ngFor="let even of evenNumber" [even]="even"></app-even>
+  </div>   
+</div>
