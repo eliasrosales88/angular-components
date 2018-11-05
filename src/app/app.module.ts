@@ -22,6 +22,17 @@ import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 
+import { Routes, RouterModule } from "@angular/router";
+import { AdvancedDatabindingComponent } from './advanced-databinding/advanced-databinding.component';
+import { BasicDatabindingComponent } from './basic-databinding/basic-databinding.component';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+
+const appRoutes: Routes = [
+  { path: '', component: BasicDatabindingComponent},
+  { path: 'advanced-databinding', component: AdvancedDatabindingComponent},
+  { path: 'lifecycle-hooks', component: LifecycleHooksComponent}
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,11 +53,15 @@ import { EvenComponent } from './even/even.component';
     DatabindingExerciseAdvancedComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    AdvancedDatabindingComponent,
+    BasicDatabindingComponent,
+    LifecycleHooksComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

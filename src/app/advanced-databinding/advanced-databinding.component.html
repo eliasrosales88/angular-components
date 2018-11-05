@@ -1,0 +1,60 @@
+<h1 class="bg-purple-title">Databinding (avanzado)</h1>
+      <span class="bg-purple">Custom property binding | Decorador @Input | <b>Padre -> Hijo</b></span>
+      <div class="border-purple border-1">
+        <p>El decorador <b>@Input</b> sirve para <b>conectar/unir</b> las propiedades de un componente con otro. Esto quiere decir que la informacion almacenada en una propiedad de un componente, viaja a otro para que aquel que la recibe pueda usar la informacion.</p>
+        <p>Este decorador se usa usualmanete para pasar informacion de un componente <b>padre a hijo</b></p>
+        <p>Para saber cual es un componente hijo y cual es un componente padre solo tenemos que fijarnos en cual de los dos componentes contiene las etiquetas del otro dentro de su plantilla html.</p>
+        <blockquote>El decorador @Input hace accesible la propiedad para que pueda recibir informacion desde su componente padre.</blockquote>
+        <p>Vemos que el objeto "carInformation" es un array almacenado en el componente padre y podemos pasarle al hijo la informacion a traves de la propiedad [car] (no es un atributo html) que hemos hecho accesible con el decorador @Input en el componente hijo.</p>
+        <p>Decorador en el componente hijo:</p>
+  
+        <code>{{'@Input() car: {brand:string, model:string};'}}</code><br><br>
+        <code>< app-input-child *ngFor="let car of carInformation" [car]="car">< /app-input-child ></code><br><br>
+        
+        <p>Tambien se puede crear un ALIAS que usariamos en la etiqueta del componenet hijo:</p>
+        <code>{{'@Input("alias") car: {brand:string, model:string};'}}</code><br><br>
+        <app-input-parent></app-input-parent>
+      </div>
+
+      <span class="bg-purple">Custom event binding | Decorador @Output | EventEmitter | <b>Hijo -> Padre</b></span>
+      <div class="border-purple border-1">
+        <p>El decorador <b>@Output</b> sirve para <b>hacer accesible</b> el evento de un componente hijo a un componente padre. Esto quiere decir que el evento (la informacion del evento) que es generado en un componente, viaja a otro para que aquel que la recibe pueda usar la informacion.</p>
+        
+        <blockquote>El decorador @Output hace accesible al evento para que pueda enviar informacion a su componente padre.</blockquote>
+        
+        <p>Decorador en el componente hijo:</p>
+        <code>{{'@Output() dataCreated = new EventEmitter< {title: string, content:string} >();'}}</code><br><br>
+        <p>Donde dataCreated es un <b>evento personalizado</b>. <i>Recordar que la propiedad con el decorador @Output se le asigna un valor con el igual (=) para convertilo en un objeto tipo EventEmitter.</i></p>
+        
+        <code>< app-output-child <b>(dataCreated)</b>="onDataCreated($event)">< /app-output-child></code>
+        
+        <app-output-parent></app-output-parent>
+      </div>
+
+      <span class="bg-purple">Local reference | Decorador @ViewChild</span>
+      <div class="border-purple border-1">
+        <p>Las <b>referencias locales</b> sirven como Id's en una plantilla HTML siendo este el unico sitio donde las podemos usar y son interpretadas por Angular de manera tal que podamos acceder a todas las propiedades de esos elementos html a traves del codigo TS del componente.</p>
+        
+        <blockquote>El decorador @ViewChild hace accesible al elemento html o componente que se le sea pasado a traves de una <b>referencia local</b>.</blockquote>
+        
+        <h4>Decorador @ViewChild en el componente hijo:</h4>
+        <code>{{'@ViewChild("<b>usernameInput</b>") username: ElementRef;'}}</code><br><br>
+        <p>Donde <b>usernameInput</b> es una <b>referencia local</b></p>
+        <p>De esta manera, tenemos que al usar el decorador @ViewChild el objeto pasa a ser de tipo <b>ElementRef</b> que tiene la propiedad <b>nativeElement</b> para acceder a las propiedades del elemento que hemos seleccionado.</p><br>
+        
+        <h4>Decorador @ViewChild en el componente Padre:</h4>
+        <p>Primero usamos una referencia local en el componente hijo:</p>
+        <code>< app-local-ref-child (userListFromChild)="onUserAdded($event)" <b>#localRefChild</b>>< /app-local-ref-child></code><br><br>
+        
+        <p>En nuestro codigo TS del componente padre tenemos:</p>
+        <code>{{"@ViewChild('<b>localRefChild</b>') childComponent: LocalRefChildComponent;"}}</code><br><br>
+        <p>Aqui vemos como la propiedad es de tipo <b>LocalRefChildComponent</b> y de esta manera hacemos accesible las propiedades del componente hijo al padre.</p>
+        
+        <app-local-ref-parent></app-local-ref-parent>
+      </div>
+
+      <h1 class="bg-green-title">Ejercicio Databinding AVANZADO</h1>
+      <span class="bg-green">Ejercicio Databinding Avanzado</span>
+      <div class="border-1 border-green">
+        <app-databinding-exercise-advanced></app-databinding-exercise-advanced>
+      </div>
